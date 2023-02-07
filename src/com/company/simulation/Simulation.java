@@ -16,7 +16,7 @@ public class Simulation {
     private static List<Animal> allAnimals = new ArrayList<>();
     private static Map<AnimalType, Set<Animal>> animalsByType;
 
-    Island island = new Island(AnimalsConfig.xDimension, AnimalsConfig.yDimension);
+    private final Island island = new Island(AnimalsConfig.xDimension, AnimalsConfig.yDimension);
     public static int totalAnimal = 0;
 
     static {

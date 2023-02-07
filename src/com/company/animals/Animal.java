@@ -10,10 +10,10 @@ import java.util.UUID;
 import static com.company.simulation.Simulation.movesCount;
 
 
-public abstract class Animal implements Eatable, Dieable, ControlOfCondition{
-    private UUID id;
+public abstract class Animal{
+    private final UUID id;
     private final Island island;
-    private AnimalCharacteristics animalCharacteristics;
+    private final AnimalCharacteristics animalCharacteristics;
     public IslandCell position;
 
     public Animal(Island island, AnimalCharacteristics animalCharacteristics) {
@@ -99,6 +99,12 @@ public abstract class Animal implements Eatable, Dieable, ControlOfCondition{
         this.position = newIslandCell;
         this.position.addOneAnimalInCell(this);
     }
+
+    public abstract void eat();
+
+    public abstract void starvation();
+
+    public abstract void controlOfCondition();
 
     public UUID getId() {
         return id;

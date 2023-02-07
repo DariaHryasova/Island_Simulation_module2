@@ -7,12 +7,12 @@ import com.company.config.AnimalsConfig;
 import java.util.*;
 
 public class IslandCell {
-    int x;
-    int y;
+    private final int x;
+    private final int y;
     private int quantityPlantsInCell;
-    private Map<AnimalType, List<Animal>> animalsByTypeInCell;
-    private Map<Boolean, List<Animal>> groupAnimalsByType;
-    private Plants plant;
+    private final Map<AnimalType, List<Animal>> animalsByTypeInCell;
+    private final Map<Boolean, List<Animal>> groupAnimalsByType;
+    private final Plants plant;
 
     public IslandCell(int x, int y) {
         this.x = x;

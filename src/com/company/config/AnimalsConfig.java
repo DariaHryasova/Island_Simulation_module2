@@ -112,4 +112,8 @@ public class AnimalsConfig {
     public int getProbabilityOfEating(Animal hunter, Animal prey) {
         return probabilityOfEating[hunter.getAnimalType().ordinal()][prey.getAnimalType().ordinal()];
     }
+
+    public static AnimalCharacteristics getAnimalCharacteristics(AnimalType animalType){
+        return AnimalsConfig.getInstance().getMap().get(animalType);
+    }
 }
